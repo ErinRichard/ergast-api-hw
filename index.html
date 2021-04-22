@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="css/main.css">
+<title>Ergast API Homework</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- defer means that we are waiting for the entire html page to load before executing the JS -->
+<script src="js/main.js" defer></script>
+</head>
+<body class="bg">
+
+    <!-- Ranger Data HTML Elements -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <!-- Anything attached to Onclick has to be attached to the JS file -->
+                <!-- <button class="btn btn-primary" Onclick="load_data()">Get Standings</button>
+                <button class="btn btn-danger" Onclick="clear_data()">Clear Form</button>
+                <section class="list-group racer-list">
+
+                </section>
+            </div>
+        </div>
+    </div> --> 
+
+    
+    <div class="container bg">
+        <div class="row">
+            <div class="col-12 col-md-12">
+     <!--Using The DOM to Grab Form Data-->
+                <form name="racerData" id="racerDataForm">
+                    <label for="season" class="bold">Season</label>
+                    <input type="text" name="season" id="season">
+
+                    <label for="round" class="bold">Round</label>
+                    <input type="text" name="round" id="round">
+                    
+                    <button class="btn btn-outline-dark btn-margin" Onclick="load_data()" return false;>Get Standings</button>
+                    <button class="btn btn-outline-dark btn-margin" Onclick="clear_data()"return false;>Clear Form</button>
+                    <section class="list-group padding">
+
+                    </section>
+
+                </form>
+            </div>
+        </div>
+
+                <table class="table table-striped table-dark table-hover" id="racer-table">
+                    <thead>
+                
+                        <tr>
+                            <th>Position</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Full Name</th>
+                            <th>Nationality</th>
+                            <th>Sponsor</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead> 
+                    <tbody class="racer-list"></tbody>        
+                </table>
+        
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>
