@@ -14,3 +14,8 @@ body{
 .btn-margin{
     margin-left: 15px;
 }
+
+/* Limit number of result rows displayed to 7 (8 because it includes header row) */
+table tr:nth-child(n+8) {
+    display:none;
+  }
